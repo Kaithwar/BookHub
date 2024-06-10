@@ -1,8 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import {
-  BrowserRouter, Routes, Route
-} from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { AppProvider } from './context.';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -17,9 +15,9 @@ root.render(
   <AppProvider>
     <BrowserRouter>
       <Routes>
-        <Route path = "/" element = {<Home />}>
-          <Route path = "book" element = {<BookList />} />
-          <Route path = "/book/:id" element = {<BookDetails />} />
+        <Route path="/" element={<Home />}>
+          <Route path="book" element={<BookList />} />
+          <Route path="/book/:id" element={<BookDetails />} />
           <Route path="/bookshelf" element={<Bookshelf />} />
         </Route>
       </Routes>
@@ -27,4 +25,3 @@ root.render(
     </BrowserRouter>
   </AppProvider>
 );
-
